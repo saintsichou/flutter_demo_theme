@@ -1,6 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_theme/theme/index.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,32 +9,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        //亮度
-        // brightness: Brightness.dark,
-        //floatbutton\switch
-        // accentColor: Colors.red,
-        //tabbar daohang
-        // primaryColor: Colors.yellow,
-        //buttonThem
-        // buttonTheme: ButtonThemeData(
-        //   height: 30,
-        //   minWidth: 30,
-        //   buttonColor: Colors.red
-        // ),
-        // cardTheme: CardTheme(
-        //   color: Colors.yellow,
-        //   elevation: 10,
-        //   // shape: s
-        // ),
-        //文字主题
-        textTheme: TextTheme(
-          body1: TextStyle(fontSize:16),
-          body2:TextStyle(fontSize:12)//Theme.of(context).textTheme.display1/body1
-        ),
-        //主题颜色
-        primarySwatch: Colors.blue,
-      ),
+      theme: MyThemeData.lightTheme,
+      // darkTheme: MyThemeData.darkTheme,
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
